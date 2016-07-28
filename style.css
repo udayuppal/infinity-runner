@@ -5,3 +5,8 @@ div#game_elements {
 canvas#game {
   margin: auto;
 }
+
+p#title {
+  font-family: 'VT323';
+  font-size: 72;
+}
