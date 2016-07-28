@@ -1,8 +1,8 @@
-.game_elements {
+#game_elements {
   text-align:center;
   background-color: red;
 }
 
-.game {
+#game {
   margin: auto;
 }
