@@ -2,7 +2,7 @@
 window.onload = function () {
     var CANVAS = document.getElementById("game");
     var CONTEXT = CANVAS.getContext("2d");
-    CANVAS.addEventListener("keydown", keyDown);
+    document.addEventListener("keydown", keyDown);
 }
 
 //Constants
