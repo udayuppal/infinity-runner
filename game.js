@@ -47,7 +47,9 @@ function updateElements() {
 
 //drawing all elements
 function drawElements() {
-
+    CONTEXT.beginPath();
+    CONTEXT.rect(0, CANVAS.width - runner.y - 10, 10, 10);
+    CONTEXT.stroke();
 }
 
 //main function running based on FPS
