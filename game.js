@@ -52,7 +52,7 @@ function updateElements() {
 function drawElements() {
     console.log(CONTEXT);
     CONTEXT.beginPath();
-    CONTEXT.rect(0, CANVAS.width - runner.y - 10, 10, 10);
+    CONTEXT.rect(0, CANVAS.height - runner.y - 10, 10, 10);
     CONTEXT.stroke();
 }
 
@@ -60,9 +60,6 @@ function drawElements() {
 function main() {
     updateElements();
     drawElements();
-
-    console.log(runner.y);
-
 
     counter++;
     setTimeout(function() {main();}, 1000/FPS);
