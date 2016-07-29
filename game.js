@@ -27,3 +27,4 @@ function main() {
 
     window.setTimeout(1000/FPS, function() {main()})
 }
+main();
