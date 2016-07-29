@@ -1,7 +1,9 @@
 //originally loading canvas and context
+var CANVAS;
+var CONTEXT;
 window.onload = function () {
-    var CANVAS = document.getElementById("game");
-    var CONTEXT = CANVAS.getContext("2d");
+    CANVAS = document.getElementById("game");
+    CONTEXT = CANVAS.getContext("2d");
     document.addEventListener("keydown", keyDown);
 }
 
