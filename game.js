@@ -11,7 +11,7 @@ window.onload = function () {
 //Constants
 var FPS = 100;
 var JUMP_START = 30;
-var JUMP_MODIFIER = 0.5;
+var JUMP_MODIFIER = 0.66;
 
 //Colors and Text
 
@@ -50,7 +50,8 @@ function updateElements() {
 
 //drawing all elements
 function drawElements() {
-    console.log(CONTEXT);
+    CONTEXT.clearRect(0,0,CANVAS.width, CANVAS.height);
+
     CONTEXT.beginPath();
     CONTEXT.rect(0, CANVAS.height - runner.y - 10, 10, 10);
     CONTEXT.stroke();
