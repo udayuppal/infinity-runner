@@ -7,6 +7,7 @@ window.onload = function () {
 
 //Constants
 var FPS = 100;
+var JUMPSTART = 100;
 
 //Colors and Text
 
@@ -23,10 +24,9 @@ var runner = {
 //function for spacebar press
 function keyDown(e) {
     if (e.keyCode == 32) {
-        console.log("jump triggered");
         if (!runner.jumping) {
             runner.jumping = true;
-            runner.y_vel == 10;
+            runner.y_vel = JUMPSTART;
         }
     }
 }
@@ -34,12 +34,13 @@ function keyDown(e) {
 //updates and calculations
 function updateElements() {
     if (runner.jumping) {
-        if (runner.y_vel <= -10) {
+        if (runner.y_vel <= -JUMPSTART) {
             runner.y_vel = 0;
             runner.jumping = false;
             runner.y = 0;
         } else {
             runner.y += jump_modifier * runner.y_vel;
+            runner.y_vel--;
         }
     } 
 }
