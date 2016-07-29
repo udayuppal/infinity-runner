@@ -49,6 +49,7 @@ function updateElements() {
 
 //drawing all elements
 function drawElements() {
+    console.log(CONTEXT);
     CONTEXT.beginPath();
     CONTEXT.rect(0, CANVAS.width - runner.y - 10, 10, 10);
     CONTEXT.stroke();
