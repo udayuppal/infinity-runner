@@ -5,6 +5,7 @@ window.onload = function () {
     CANVAS = document.getElementById("game");
     CONTEXT = CANVAS.getContext("2d");
     document.addEventListener("keydown", keyDown);
+    main();
 }
 
 //Constants
@@ -66,4 +67,3 @@ function main() {
     counter++;
     setTimeout(function() {main();}, 1000/FPS);
 }
-main();
