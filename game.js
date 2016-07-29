@@ -1,7 +1,10 @@
+//originally loading canvas and context
+window.onload = function () {
+    var CANVAS = document.getElementById("game");
+    var CONTEXT = CANVAS.getContext("2d");
+}
+
 //Constants
-var CANVAS = document.getElementById("game");
-console.log(CANVAS);
-var CONTEXT = CANVAS.getContext("2d");
 var FPS = 100;
 
 //Colors and Text
