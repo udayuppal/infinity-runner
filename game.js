@@ -26,7 +26,7 @@ function keyDown(e) {
     if (e.keyCode == 32) {
         if (!runner.jumping) {
             runner.jumping = true;
-            runner.y_vel = JUMPSTART;
+            runner.y_vel = JUMP_START;
         }
     }
 }
