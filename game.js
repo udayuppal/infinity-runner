@@ -7,7 +7,7 @@ window.onload = function () {
 
 //Constants
 var FPS = 100;
-var JUMPSTART = 100;
+var JUMPSTART = 50;
 
 //Colors and Text
 
@@ -55,7 +55,7 @@ function main() {
     updateElements();
     drawElements();
 
-    console.log(runner.y_vel);
+    console.log(runner.y);
 
 
     counter++;
