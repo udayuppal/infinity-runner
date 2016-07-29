@@ -25,6 +25,7 @@ function main() {
     updateElements();
     drawElements();
 
-    setTimeout(function() {main();}, 1000/FPS)
+    setInterval(function() {main();}, 1000/FPS);
+    
 }
 main();
