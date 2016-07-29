@@ -53,7 +53,7 @@ function main() {
     updateElements();
     drawElements();
 
-    console.log(runner.y);
+    console.log(runner.y_vel);
 
 
     counter++;
