@@ -1,6 +1,6 @@
 //Constants
 var CANVAS = document.getElementById("game");
-var CONTEXT = canvas.getContext("2d");
+var CONTEXT = CANVAS.getContext("2d");
 var FPS = 100;
 
 //Colors and Text
