@@ -23,6 +23,7 @@ var runner = {
 //function for spacebar press
 function keyDown(e) {
     if (e.keyCode == 32) {
+        console.log("jump triggered");
         if (!runner.jumping) {
             runner.jumping = true;
             runner.y_vel == 10;
