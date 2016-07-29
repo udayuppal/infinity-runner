@@ -15,9 +15,9 @@ var FPS = 100;
 var counter = 0;
 var jump_modifier = 1;
 var runner = {
-    jumping = false,
-    y=0,
-    y_vel = 0
+    jumping: false,
+    y: 0,
+    y_vel: 0
 }
 
 //function for spacebar press
