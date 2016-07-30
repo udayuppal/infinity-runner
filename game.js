@@ -33,7 +33,7 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Runner.png"
-            var frameToDraw = Math.floor((counter % 8)/2);
+            var frameToDraw = Math.floor((counter % 20)/5);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
     }
