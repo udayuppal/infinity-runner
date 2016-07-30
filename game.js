@@ -38,6 +38,7 @@ window.onload = function () {
             CONTEXT.drawImage(sprite, 32*frameToDraw, 0, 32, 32, this.x, this.y - RUNNER_SIZE, RUNNER_SIZE, RUNNER_SIZE);
         }
     }
+
     function seagull() {
         this.size = SEAGULL_SIZE;
         this.y = SEAGULL_Y;
@@ -124,4 +125,5 @@ window.onload = function () {
         setTimeout(function() {main();}, 1000/FPS);
     }
 
+    main();
 }
