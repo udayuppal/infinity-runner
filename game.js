@@ -33,6 +33,7 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Runner.png"
+            console.log(counter);
             var frameToDraw = Math.floor((counter % 100)/25);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
@@ -44,7 +45,7 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-            console.log("draw");
+            
         }
     }
 
@@ -54,7 +55,7 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-            console.log("draw");
+           
         }
     }
 
