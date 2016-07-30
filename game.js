@@ -45,7 +45,7 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-
+            console.log("draw");
         }
     }
 
@@ -55,7 +55,7 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-
+            console.log("draw");
         }
     }
 
