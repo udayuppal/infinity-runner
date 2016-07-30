@@ -111,8 +111,8 @@ window.onload = function () {
         player.draw()
 
         //draw obstacles
-        for (obstacle in obstacles) {
-            obstacle.draw();
+        for (var i = 0; i < obstacles.length; i++) {
+            obstacles[i].draw();
         }
     }
 
