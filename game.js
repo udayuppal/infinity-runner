@@ -18,7 +18,7 @@ window.onload = function () {
     const ROCK_PROBABILITY = 0.65;
 
     //Colors and Text
-    const BG = "yellow";
+    const BACKGROUND = "yellow";
 
     //Variables
     var counter = 0;
@@ -112,9 +112,9 @@ window.onload = function () {
     //drawing all elements
     function drawElements() {
         CONTEXT.clearRect(0,0,CANVAS.width, CANVAS.height);
-        CONTEXT.fillStyle = BG;
+        CONTEXT.fillStyle = BACKGROUND;
         CONTEXT.fillRect(0, 0, CANVAS.width, CANVAS.height);
-        
+
         //draw player
         player.draw()
 
