@@ -33,9 +33,9 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.scr = "sprites/Runner.png"
-            var frameToDraw = counter % 4;
-            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, 50, 50, 32, 32);
-            CONTEXT.drawImage(sprite, 32, 32);
+            //var frameToDraw = counter % 4;
+            //CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, 50, 50, 32, 32);
+            CONTEXT.drawImage(sprite, 10, 10, 32, 128);
         }
     }
 
@@ -112,7 +112,7 @@ window.onload = function () {
 
         //draw obstacles
         for (var i = 0; i < obstacles.length; i++) {
-            obstacles[i].draw();
+            //obstacles[i].draw();
         }
     }
 
