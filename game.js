@@ -14,6 +14,7 @@ window.onload = function () {
     const OBSTACLE_SPEED = -10;
     const SEAGULL_Y = 0;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
+    const SPAWN_SPEED = 200;
 
     //Colors and Text
 
@@ -97,7 +98,7 @@ window.onload = function () {
         }
 
         //creating new obstacles
-        if (counter % 200 == 0) {
+        if (counter % SPAWN_SPEED == 0) {
             if (Math.random() > 0.5) {
                 obstacles.push(new seagull());
             } else {
