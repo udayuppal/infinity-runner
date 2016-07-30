@@ -8,9 +8,9 @@ window.onload = function () {
     const FPS = 100;
     const JUMP_START = 30;
     const JUMP_MODIFIER = 0.66;
-    const RUNNER_SIZE = 120;
-    const SEAGULL_SIZE = 120;
-    const ROCK_SIZE = 120;
+    const RUNNER_SIZE = 90;
+    const SEAGULL_SIZE = 90;
+    const ROCK_SIZE = 90;
     const OBSTACLE_SPEED = -10;
     const SEAGULL_Y = SEAGULL_SIZE;
     const ROCK_Y = CANVAS.height - ROCK_SIZE
@@ -33,7 +33,7 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Runner.png"
-            var frameToDraw = Math.floor((counter % 20)/5);
+            var frameToDraw = Math.floor((counter % 100)/25);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
     }
