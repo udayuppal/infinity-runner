@@ -14,7 +14,7 @@ window.onload = function () {
     const OBSTACLE_SPEED = -10;
     const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
-    const SPAWN_SPEED = 150;
+    const SPAWN_SPEED = 140;
 
     //Colors and Text
 
