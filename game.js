@@ -7,7 +7,7 @@ window.onload = function () {
     //Constants
     const FPS = 100;
     const JUMP_START = 30;
-    const JUMP_MODIFIER = 0.66;
+    const JUMP_MODIFIER = 0.4;
     const RUNNER_SIZE = 90;
     const SEAGULL_SIZE = 90;
     const ROCK_SIZE = 90;
@@ -79,7 +79,7 @@ window.onload = function () {
                 player.jumping = false;
                 player.y = CANVAS.height - player.size;
             } else {
-                player.y -= JUMP_MODIFIER * runner.y_vel;
+                player.y -= JUMP_MODIFIER * player.y_vel;
                 player.y_vel--;
             }
         }
