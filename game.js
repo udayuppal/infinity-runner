@@ -34,6 +34,7 @@ window.onload = function () {
             var sprite = new Image();
             sprite.scr = "sprites/Runner.png"
             var frameToDraw = counter % 4;
+            console.log(this.x, this.y);
             CONTEXT.drawImage(sprite, 32*frameToDraw, 0, 32, 32, this.x, this.y - RUNNER_SIZE, RUNNER_SIZE, RUNNER_SIZE);
         }
     }
