@@ -25,16 +25,16 @@ window.onload = function () {
 
     //Constructors
     function runner() {
+        this.size = RUNNER_SIZE;
         this.jumping = false;
         this.x = 0;
-        this.y = 0;
+        this.y = CANVAS.height - this.size;
         this.y_vel = 0;
-        this.size = RUNNER_SIZE;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Runner.png"
             var frameToDraw = Math.floor((counter % 8)/2);
-            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x,10,32,32);
+            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
     }
 
@@ -76,9 +76,9 @@ window.onload = function () {
             if (player.y_vel <= -JUMP_START) {
                 player.y_vel = 0;
                 player.jumping = false;
-                player.y = 0;
+                player.y = CANVAS.height - player.size;
             } else {
-                player.y += JUMP_MODIFIER * runner.y_vel;
+                player.y -= JUMP_MODIFIER * runner.y_vel;
                 player.y_vel--;
             }
         }
