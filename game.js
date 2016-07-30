@@ -9,12 +9,12 @@ window.onload = function () {
     const JUMP_START = 30;
     const JUMP_MODIFIER = 0.5;
     const RUNNER_SIZE = 90;
-    const SEAGULL_SIZE = 90;
-    const ROCK_SIZE = 90;
+    const SEAGULL_SIZE = 100;
+    const ROCK_SIZE = 180;
     const OBSTACLE_SPEED = -10;
-    const SEAGULL_Y = 0;
+    const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
-    const SPAWN_SPEED = 200;
+    const SPAWN_SPEED = 150;
 
     //Colors and Text
 
