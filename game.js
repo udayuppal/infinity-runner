@@ -90,11 +90,10 @@ window.onload = function () {
 
         //updating obstacles
         for (var i = 0; i < obstacles.length; i++) {
-            obstacles[i].x -= obstacles[i].x_vel;
+            obstacles[i].x += obstacles[i].x_vel;
             if (obstacles[i].x < -obstacles[i].size) {
                 obstacles.splice(i,1);
             }
-            console.log(obstacles[i].x, obstacles[i].y);
         }
 
         //creating new obstacles
