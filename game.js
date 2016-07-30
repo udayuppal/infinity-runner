@@ -94,6 +94,7 @@ window.onload = function () {
             if (obstacles[i].x < -obstacles[i].size) {
                 obstacles.splice(i,1);
             }
+            console.log(obstacles[i].x, obstacles[i].y);
         }
 
         //creating new obstacles
