@@ -89,10 +89,10 @@ window.onload = function () {
         }
 
         //updating obstacles
-        for (obstacle in obstacles) {
-            obstacle.x -= obstacle.x_vel;
-            if (obstacle.x < -obstacle.size) {
-                obstacles.splice(obstacles.indexOf(obstacle),1);
+        for (var i = 0; i < obstacles.length; i++) {
+            obstacles[i].x -= obstacles[i].x_vel;
+            if (obstacles[i].x < -obstacles[i].size) {
+                obstacles.splice(i,1);
             }
         }
 
@@ -117,7 +117,6 @@ window.onload = function () {
         //draw obstacles
         for (var i = 0; i < obstacles.length; i++) {
             obstacles[i].draw();
-            console.log("drawing");
         }
     }
 
