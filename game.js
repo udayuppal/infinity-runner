@@ -7,13 +7,13 @@ window.onload = function () {
     //Constants
     const FPS = 100;
     const JUMP_START = 30;
-    const JUMP_MODIFIER = 0.4;
+    const JUMP_MODIFIER = 0.5;
     const RUNNER_SIZE = 90;
     const SEAGULL_SIZE = 90;
     const ROCK_SIZE = 90;
     const OBSTACLE_SPEED = -10;
-    const SEAGULL_Y = SEAGULL_SIZE;
-    const ROCK_Y = CANVAS.height - ROCK_SIZE
+    const SEAGULL_Y = 0;
+    const ROCK_Y = CANVAS.height - ROCK_SIZE;
 
     //Colors and Text
 
@@ -33,7 +33,6 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Runner.png"
-            console.log(counter);
             var frameToDraw = Math.floor((counter % 40)/10);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
@@ -45,7 +44,10 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-            
+            var sprite = new Image();
+            sprite.src = "sprites/Seagull.png"
+            var frameToDraw = Math.floor((counter % 20)/10);
+            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
     }
 
@@ -55,7 +57,9 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-           
+           var sprite = new Image();
+            sprite.src = "sprites/Rock.png"
+            CONTEXT.drawImage(sprite, this.x, this.y, this.size, this.size);
         }
     }
 
@@ -112,7 +116,7 @@ window.onload = function () {
 
         //draw obstacles
         for (var i = 0; i < obstacles.length; i++) {
-            //obstacles[i].draw();
+            obstacles[i].draw();
         }
     }
 
