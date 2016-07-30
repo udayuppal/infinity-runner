@@ -46,7 +46,7 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Seagull.png"
-            var frameToDraw = Math.floor((counter % 20)/10);
+            var frameToDraw = Math.floor((counter % 24)/12);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
         }
     }
