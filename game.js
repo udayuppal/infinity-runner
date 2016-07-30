@@ -15,9 +15,10 @@ window.onload = function () {
     const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
     const SPAWN_SPEED = 120;
+    const ROCK_PROBABILITY = 0.65;
 
     //Colors and Text
-
+    const BG = "yellow";
 
     //Variables
     var counter = 0;
@@ -99,7 +100,7 @@ window.onload = function () {
 
         //creating new obstacles
         if (counter % SPAWN_SPEED == 0) {
-            if (Math.random() > 0.5) {
+            if (Math.random() > ROCK_PROBABILITY) {
                 obstacles.push(new seagull());
             } else {
                 obstacles.push(new rock());
@@ -111,7 +112,9 @@ window.onload = function () {
     //drawing all elements
     function drawElements() {
         CONTEXT.clearRect(0,0,CANVAS.width, CANVAS.height);
-
+        CONTEXT.fillStyle = BG;
+        CONTEXT.fillRect(0, 0, CANVAS.width, CANVAS.height);
+        
         //draw player
         player.draw()
 
