@@ -57,7 +57,7 @@ window.onload = function () {
         this.x = CANVAS.width;
         this.x_vel = OBSTACLE_SPEED;
         this.draw = function () {
-           var sprite = new Image();
+            var sprite = new Image();
             sprite.src = "sprites/Rock.png"
             CONTEXT.drawImage(sprite, this.x, this.y, this.size, this.size);
         }
@@ -117,6 +117,7 @@ window.onload = function () {
         //draw obstacles
         for (var i = 0; i < obstacles.length; i++) {
             obstacles[i].draw();
+            console.log("drawing");
         }
     }
 
