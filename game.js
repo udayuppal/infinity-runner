@@ -9,8 +9,14 @@ window.onload = function () {
     const JUMP_START = 30;
     const JUMP_MODIFIER = 0.5;
     const RUNNER_SIZE = 90;
+    const RUNNER_HEIGHT = RUNNER_SIZE;
+    const RUNNER_WIDTH = 0.8 * RUNNER_SIZE;
     const SEAGULL_SIZE = 100;
+    const SEAGULL_WIDTH = 0.9 * SEAGULL_SIZE;
+    const SEAFULL_HEIGHT = 0.8 * SEAGULL_SIZE;
     const ROCK_SIZE = 180;
+    const ROCK_WIDTH = 0.8 * ROCK_SIZE;
+    const ROCK_HEIGHT = 0.5 * ROCK_SIZE;
     const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
     const ROCK_PROBABILITY = 0.63;
@@ -30,45 +36,45 @@ window.onload = function () {
     function runner() {
         this.size = RUNNER_SIZE;
         this.jumping = false;
-        this.x = 0;
-        this.y = CANVAS.height - this.size;
+        this.x = this.size/2;
+        this.y = CANVAS.height - this.size/2;
         this.y_vel = 0;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Runner.png"
             var frameToDraw = Math.floor((counter % 40)/10);
-            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
+            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x - this.size/2, this.y - this.size/2, this.size, this.size);
             CONTEXT.strokeStyle = BORDER;
-            CONTEXT.strokeRect(this.x, this.y, this.size, this.size);
+            CONTEXT.strokeRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
         }
     }
 
     function seagull() {
         this.size = SEAGULL_SIZE;
-        this.y = SEAGULL_Y;
-        this.x = CANVAS.width;
+        this.y = SEAGULL_Y + this.size/2;
+        this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Seagull.png"
             var frameToDraw = Math.floor((counter % 24)/12);
-            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
+            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x - this.size/2, this.y - this.size/2, this.size, this.size);
             CONTEXT.strokeStyle = BORDER;
-            CONTEXT.strokeRect(this.x, this.y, this.size, this.size);
+            CONTEXT.strokeRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
         }
     }
 
     function rock() {
         this.size = ROCK_SIZE;
-        this.y = ROCK_Y;
-        this.x = CANVAS.width;
+        this.y = ROCK_Y + this.size/2;
+        this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Rock.png"
-            CONTEXT.drawImage(sprite, this.x, this.y, this.size, this.size);            
+            CONTEXT.drawImage(sprite, this.x - this.size/2, this.y - this.size/2, this.size, this.size);            
             CONTEXT.strokeStyle = BORDER;
-            CONTEXT.strokeRect(this.x, this.y, this.size, this.size);
+            CONTEXT.strokeRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
         }
     }
 
@@ -90,7 +96,7 @@ window.onload = function () {
             if (player.y_vel <= -JUMP_START) {
                 player.y_vel = 0;
                 player.jumping = false;
-                player.y = CANVAS.height - player.size;
+                player.y = CANVAS.height - player.size/2;
             } else {
                 player.y -= JUMP_MODIFIER * player.y_vel;
                 player.y_vel--;
@@ -100,7 +106,7 @@ window.onload = function () {
         //updating obstacles
         for (var i = 0; i < obstacles.length; i++) {
             obstacles[i].x += obstacles[i].x_vel;
-            if (obstacles[i].x < -obstacles[i].size) {
+            if (obstacles[i].x < -obstacles[i].size/2) {
                 obstacles.splice(i,1);
             }
         }
