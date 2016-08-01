@@ -35,6 +35,8 @@ window.onload = function () {
     //Constructors
     function runner() {
         this.size = RUNNER_SIZE;
+        this.width = RUNNER_WIDTH;
+        this.height = RUNNER_HEIGHT;
         this.jumping = false;
         this.x = this.size/2;
         this.y = CANVAS.height - this.size/2;
@@ -45,12 +47,14 @@ window.onload = function () {
             var frameToDraw = Math.floor((counter % 40)/10);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x - this.size/2, this.y - this.size/2, this.size, this.size);
             CONTEXT.strokeStyle = BORDER;
-            CONTEXT.strokeRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+            CONTEXT.strokeRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
         }
     }
 
     function seagull() {
         this.size = SEAGULL_SIZE;
+        this.width = SEAGULL_WIDTH;
+        this.height = SEAGULL_HEIGHT;
         this.y = SEAGULL_Y + this.size/2;
         this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
@@ -60,12 +64,14 @@ window.onload = function () {
             var frameToDraw = Math.floor((counter % 24)/12);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x - this.size/2, this.y - this.size/2, this.size, this.size);
             CONTEXT.strokeStyle = BORDER;
-            CONTEXT.strokeRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+            CONTEXT.strokeRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
         }
     }
 
     function rock() {
         this.size = ROCK_SIZE;
+        this.width = ROCK_WIDTH;
+        this.height = ROCK_HEIGHT;
         this.y = ROCK_Y + this.size/2;
         this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
@@ -74,7 +80,7 @@ window.onload = function () {
             sprite.src = "sprites/Rock.png"
             CONTEXT.drawImage(sprite, this.x - this.size/2, this.y - this.size/2, this.size, this.size);            
             CONTEXT.strokeStyle = BORDER;
-            CONTEXT.strokeRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+            CONTEXT.strokeRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
         }
     }
 
