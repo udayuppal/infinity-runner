@@ -15,7 +15,7 @@ window.onload = function () {
     const SEAGULL_WIDTH = 0.9 * SEAGULL_SIZE;
     const SEAGULL_HEIGHT = 0.65 * SEAGULL_SIZE;
     const ROCK_SIZE = 180;
-    const ROCK_WIDTH = 0.6 * ROCK_SIZE;
+    const ROCK_WIDTH = 0.57 * ROCK_SIZE;
     const ROCK_HEIGHT = 0.4 * ROCK_SIZE;
     const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
@@ -71,12 +71,12 @@ window.onload = function () {
         this.width = ROCK_WIDTH;
         this.height = ROCK_HEIGHT;
         this.y = ROCK_Y + this.size/2 + 50;
-        this.x = CANVAS.width + this.size/2;
+        this.x = CANVAS.width + this.size/2 - 5;
         this.x_vel = obstacle_speed;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Rock.png"
-            CONTEXT.drawImage(sprite, this.x - this.size/2, this.y - this.size/2 - 50, this.size, this.size);            
+            CONTEXT.drawImage(sprite, this.x - this.size/2 + 5, this.y - this.size/2 - 50, this.size, this.size);            
         }
     }
 
