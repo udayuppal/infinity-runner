@@ -24,7 +24,7 @@ window.onload = function () {
     //Colors and Text
     const BACKGROUND = "yellow";
     const SCORE_COLOR = "black";
-    const SCORE_FONT = "20px VT323";
+    const SCORE_FONT = "30px VT323";
 
     //Variables
     var counter = 0;
