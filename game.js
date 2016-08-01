@@ -10,7 +10,7 @@ window.onload = function () {
     const JUMP_MODIFIER = 0.5;
     const RUNNER_SIZE = 90;
     const RUNNER_HEIGHT = RUNNER_SIZE;
-    const RUNNER_WIDTH = 0.64 * RUNNER_SIZE;
+    const RUNNER_WIDTH = 0.6 * RUNNER_SIZE;
     const SEAGULL_SIZE = 100;
     const SEAGULL_WIDTH = 0.9 * SEAGULL_SIZE;
     const SEAGULL_HEIGHT = 0.77 * SEAGULL_SIZE;
@@ -55,7 +55,7 @@ window.onload = function () {
         this.size = SEAGULL_SIZE;
         this.width = SEAGULL_WIDTH;
         this.height = SEAGULL_HEIGHT;
-        this.y = SEAGULL_Y + this.size/2 - 10;
+        this.y = SEAGULL_Y + this.size/2 + 10;
         this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
         this.draw = function () {
@@ -72,13 +72,13 @@ window.onload = function () {
         this.size = ROCK_SIZE;
         this.width = ROCK_WIDTH;
         this.height = ROCK_HEIGHT;
-        this.y = ROCK_Y + this.size/2 + 30;
+        this.y = ROCK_Y + this.size/2 + 50;
         this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Rock.png"
-            CONTEXT.drawImage(sprite, this.x - this.size/2, this.y - this.size/2 - 30, this.size, this.size);            
+            CONTEXT.drawImage(sprite, this.x - this.size/2, this.y - this.size/2 - 50, this.size, this.size);            
             CONTEXT.strokeStyle = BORDER;
             CONTEXT.strokeRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
         }
