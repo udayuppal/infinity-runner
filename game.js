@@ -19,7 +19,7 @@ window.onload = function () {
     const ROCK_HEIGHT = 0.5 * ROCK_SIZE;
     const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
-    const ROCK_PROBABILITY = 0.63;
+    const ROCK_PROBABILITY = 0.60;
 
     //Colors and Text
     const BACKGROUND = "yellow";
