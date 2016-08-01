@@ -17,6 +17,7 @@ window.onload = function () {
 
     //Colors and Text
     const BACKGROUND = "yellow";
+    const BORDER = "black";
 
     //Variables
     var counter = 0;
@@ -37,6 +38,7 @@ window.onload = function () {
             sprite.src = "sprites/Runner.png"
             var frameToDraw = Math.floor((counter % 40)/10);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
+            CONTEXT.strokeStyle = BORDER;
             CONTEXT.strokeRect(this.x, this.y, this.size, this.size);
         }
     }
@@ -51,6 +53,7 @@ window.onload = function () {
             sprite.src = "sprites/Seagull.png"
             var frameToDraw = Math.floor((counter % 24)/12);
             CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x, this.y, this.size, this.size);
+            CONTEXT.strokeStyle = BORDER;
             CONTEXT.strokeRect(this.x, this.y, this.size, this.size);
         }
     }
@@ -63,7 +66,8 @@ window.onload = function () {
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Rock.png"
-            CONTEXT.drawImage(sprite, this.x, this.y, this.size, this.size);
+            CONTEXT.drawImage(sprite, this.x, this.y, this.size, this.size);            
+            CONTEXT.strokeStyle = BORDER;
             CONTEXT.strokeRect(this.x, this.y, this.size, this.size);
         }
     }
