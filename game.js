@@ -16,7 +16,7 @@ window.onload = function () {
     const SEAGULL_HEIGHT = 0.65 * SEAGULL_SIZE;
     const ROCK_SIZE = 180;
     const ROCK_WIDTH = 0.66 * ROCK_SIZE;
-    const ROCK_HEIGHT = 0.5 * ROCK_SIZE;
+    const ROCK_HEIGHT = 0.44 * ROCK_SIZE;
     const SEAGULL_Y = 50;
     const ROCK_Y = CANVAS.height - ROCK_SIZE;
     const ROCK_PROBABILITY = 0.60;
@@ -156,7 +156,7 @@ window.onload = function () {
             let obstacle_y_max = obstacles[i].y + obstacles[i].height/2;
             
             if (player_x_max > obstacle_x_min && player_x_min < obstacle_x_max && 
-                player_y_max > obstacle_y_min && player_y_min < obstacle_y_min) {
+                player_y_max > obstacle_y_min && player_y_min < obstacle_y_max) {
                 collision = true;
             }
         }
