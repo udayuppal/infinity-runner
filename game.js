@@ -23,7 +23,8 @@ window.onload = function () {
 
     //Colors and Text
     const BACKGROUND = "yellow";
-    const BORDER = "black";
+    const SCORE_COLOR = "black";
+    const SCORE_FONT = "20px VT323";
 
     //Variables
     var counter = 0;
@@ -156,8 +157,14 @@ window.onload = function () {
         }
     }
 
-    function endGame() {
+    function drawScore () {
+        CONTEXT.font = SCORE_FONT;
+        CONTEXT.fillStyle = SCORE_COLOR;
+        CONTEXT.fillText(counter, CANVAS.width - CONTEXT.measureText(counter).width - 20, 20);
+    }
 
+    function endGame() {
+        
     }
 
     //main function running based on FPS
@@ -167,6 +174,7 @@ window.onload = function () {
             updateElements();
             drawElements();
             detectCollisions();
+            drawScore();
         } else {
             endGame();
         }
