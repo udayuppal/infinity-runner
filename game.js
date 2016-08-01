@@ -127,8 +127,9 @@ window.onload = function () {
     //drawing all elements
     function drawElements() {
         CONTEXT.clearRect(0,0,CANVAS.width, CANVAS.height);
-        CONTEXT.fillStyle = BACKGROUND;
-        CONTEXT.fillRect(0, 0, CANVAS.width, CANVAS.height);
+        var background = new Image();
+        background.src = "sprites/Background.png";
+        CONTEXT.drawImage(background, 0, 0, CANVAS.width, CANVAS.height);
 
         //draw player
         player.draw()
