@@ -13,7 +13,7 @@ window.onload = function () {
     const RUNNER_WIDTH = 0.6 * RUNNER_SIZE;
     const SEAGULL_SIZE = 100;
     const SEAGULL_WIDTH = 0.9 * SEAGULL_SIZE;
-    const SEAGULL_HEIGHT = 0.77 * SEAGULL_SIZE;
+    const SEAGULL_HEIGHT = 0.74 * SEAGULL_SIZE;
     const ROCK_SIZE = 180;
     const ROCK_WIDTH = 0.7 * ROCK_SIZE;
     const ROCK_HEIGHT = 0.5 * ROCK_SIZE;
@@ -55,14 +55,14 @@ window.onload = function () {
         this.size = SEAGULL_SIZE;
         this.width = SEAGULL_WIDTH;
         this.height = SEAGULL_HEIGHT;
-        this.y = SEAGULL_Y + this.size/2 + 5;
+        this.y = SEAGULL_Y + this.size/2 - 5;
         this.x = CANVAS.width + this.size/2;
         this.x_vel = obstacle_speed;
         this.draw = function () {
             var sprite = new Image();
             sprite.src = "sprites/Seagull.png"
             var frameToDraw = Math.floor((counter % 24)/12);
-            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x - this.size/2, this.y - this.size/2 - 5, this.size, this.size);
+            CONTEXT.drawImage(sprite, 0, 32*frameToDraw, 32, 32, this.x - this.size/2, this.y - this.size/2 + 5, this.size, this.size);
             CONTEXT.strokeStyle = BORDER;
             CONTEXT.strokeRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
         }
