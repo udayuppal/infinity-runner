@@ -142,14 +142,14 @@ window.onload = function () {
 
     function detectCollisions() {
         for (var i = 0; i < obstacles.length; i++) {
-            let player_x_min = player.x - player.width/2;
-            let player_x_max = player.x + player.width/2;
-            let player_y_min = player.y - player.height/2;
-            let player_y_max = player.y + player.height/2;
-            let obstacle_x_min = obstacles[i].x - obstacles[i].width/2;
-            let obstacle_x_max = obstacles[i].x + obstacles[i].width/2;
-            let obstacle_y_min = obstacles[i].y - obstacles[i].height/2;
-            let obstacle_y_max = obstacles[i].y + obstacles[i].height/2;
+            var player_x_min = player.x - player.width/2;
+            var player_x_max = player.x + player.width/2;
+            var player_y_min = player.y - player.height/2;
+            var player_y_max = player.y + player.height/2;
+            var obstacle_x_min = obstacles[i].x - obstacles[i].width/2;
+            var obstacle_x_max = obstacles[i].x + obstacles[i].width/2;
+            var obstacle_y_min = obstacles[i].y - obstacles[i].height/2;
+            var obstacle_y_max = obstacles[i].y + obstacles[i].height/2;
             
             if (player_x_max > obstacle_x_min && player_x_min < obstacle_x_max && 
                 player_y_max > obstacle_y_min && player_y_min < obstacle_y_max) {
